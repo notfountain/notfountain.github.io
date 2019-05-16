@@ -1,0 +1,20 @@
+.nunito-regular, .nunito-semibold, .nunito-extrabold {
+  font-family: 'Nunito', sans-serif;
+}
+
+.nunito-semibold {
+  font-weight: 600;
+}
+
+.nunito-extrabold {
+  font-weight: 800;
+}
+
+.poppins-regular, .poppin-mediun {
+  font-family: 'Poppins', sans-serif;
+}
+
+.poppin-mediun {
+  font-weight: 500;
+}
+/*# sourceMappingURL=fonts.css.map */

@@ -1,0 +1,49 @@
+.flex-container{
+    display: flex;
+    align-items: center;
+}
+
+.link-font {
+    @extend .nunito-extrabold;
+    font-size: 14px;
+    color: $primary-color;
+    text-decoration: none;
+    &:hover {
+        color: rgba(25, 26, 29, 0.5);
+    }
+}
+
+.icon-button {
+    border: none;
+    background-color:transparent;
+    padding: 0;
+    &:focus {
+        outline: unset;
+    }
+}
+
+header {
+    justify-content: space-between;
+    height:32px;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    .site-title{
+        position: absolute;
+        left: 50%;
+        font-size: 28px;
+        transform: translateX(-50%);
+    }
+
+    .left-controls {
+        margin-left: 61px;
+        .clients-link{
+            margin-left: 46px;
+            margin-right: 53px;
+        }
+    }
+    .search-controls {
+        margin-right: 66px;
+    }
+}
