@@ -94,6 +94,7 @@
         left: 50%;
         bottom: 0;
         color: $primary-color;
+        cursor: pointer;
         i {
             margin-right: 50px;
             &.disabled {
@@ -167,16 +168,18 @@ h2 {
     align-items: center;
     margin: 0;
     padding:0;
-    cursor: pointer;
     .slider-dot {
         display:block;
-        width: 6px;
-        height: 6px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         margin-right: 20px;
+        cursor: pointer;
+        &:last-child {
+            margin-right: 0;
+        }
         &.active {
-            width: 12px;
-            height: 12px;
+            transform: scale(2)
         }
     }
 }
@@ -185,27 +188,36 @@ h2 {
     li {
        margin-bottom: 40px;
        cursor: pointer;
+       &:last-child {
+           margin-bottom: 0;
+       }
        a {
            text-decoration: none;
            color: black;
        }
     }
 }
+.slider-container, .person-about-container, .links-to-press-container {
+    width: 50%;
+}
 .about-screen {
     box-sizing: border-box;
     width: 1920px;
     padding: 120px;
-    justify-content: space-between;
-
+    .person-about-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     .slider-photo {
-        width: 649px;
-        height: 948px;
+        width: 77.3%;
+        height: auto;
         background-color: #e2e8e8;
         position: relative;
         .slider-dots {
             position: absolute;
             bottom: 33px;
-            left: 324.5px;
+            left: 50%;
             transform: translateX(-50%);
             .slider-dot {
                 background-color: #fff;
@@ -215,8 +227,8 @@ h2 {
     
     .person-about {
         margin-right: auto;
-        margin-left: 190px;
-        width: 477px;
+        
+        width: 56%;
 
         .nav-about {
             list-style: none;
@@ -224,7 +236,7 @@ h2 {
             justify-content: space-between;
             width: 437px;
             padding: 0;
-            margin: 91px 0 0 0;
+
             .nav-about-item {
                 letter-spacing: 2.4px;
                 text-transform: uppercase;
@@ -246,7 +258,7 @@ h2 {
                         transform: translateX(-25%);
                         height: 2px;
                         background-color: black;
-                        width: 120px;
+                        width: 180%;
                     }
                 }
             }
@@ -258,9 +270,7 @@ h2 {
             font-size: 16px;
             line-height: 1.88;
             color: #767679;
-            &.second-paragraph {
-                margin-bottom: 109px;
-            }
+            
         }
         p.subtitle{
             font-size: 24px;
@@ -283,19 +293,21 @@ h2 {
 
 .on-press {
     width: 1920px;
-    padding: 0 120px 0 240px;
+    padding: 0 120px 0 120px;
     box-sizing: border-box;
-    justify-content: flex-end;
+    justify-content: space-between;
 
     .photo {
-        width: 839px;
+        width: 50%;
         height: 1080px;
         background-color: #e2e8e8;
         flex-shrink: 0;
     }
-
+    .links-to-press-container {
+        padding-left: 120px;
+    }
     .links-to-press {
-        margin-right: 150px;
+        width: 77.3%;
         h2 {
             margin:0;
             position: relative;
@@ -321,11 +333,11 @@ h2 {
                     background-color: #e2e8e8;
                     display: inline-block;
                     flex-shrink: 0;
-                    
+                    position: relative;
                 }
                 .news-info {
                     display: inline-block;
-                    width: 329px;
+                    
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
@@ -334,27 +346,28 @@ h2 {
                 .news-title {
                     font-size: 24px;
                     line-height: 1.5;
+                    
                 }
                 .news-date {
                     font-size: 16px;
                     line-height: 2.5;
                     color: #77777e;
                 }
-                &.video-news {
+                i {
+                    position: absolute;
+                    top: 45%;
+                    left: 45%;
+                    color: #fff;
+                    font-size: 28px;
+                }
+
+                &:hover {
                     .preview {
                         background-color: #b4d3d3;
-                        position: relative;
-                        i {
-                            position: absolute;
-                            top: 45%;
-                            left: 45%;
-                            color: #fff;
-                            font-size: 28px;
-                        }
+                        
                     }
                     .news-title {
-                        color: #87bbbc;
-                        width:294px ;
+                        color: #87bbbc;                        
                     }
                 }
             }
@@ -421,8 +434,7 @@ h2 {
                 display: block;
                 width: 100%;
                 height: 100%;
-                opacity: 0.81;
-                background-color: #030409;
+                background-color: rgba(3, 4, 9, 0.81);
                 position: relative;
                 .link-to-client {
                     display: inline-block;
